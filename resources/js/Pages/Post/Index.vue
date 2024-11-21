@@ -34,13 +34,13 @@
               <td class="px-4 py-2 border-b">{{ post.body }}</td>
               <td class="px-4 py-2 border-b flex gap-2">
                 <button
-                  @click="deletePost(post.id)"
+                  @click="deletePost(post.slug)"
                   class="px-3 py-1 bg-red-500 text-white rounded shadow hover:bg-red-600 transition"
                 >
                   Delete
                 </button>
                 <Link
-                  :href="`posts/${post.id}/edit`"
+                  :href="`posts/${post.slug}/edit`"
                   class="px-3 py-1 bg-green-500 text-white rounded shadow hover:bg-green-600 transition"
                 >
                   Edit

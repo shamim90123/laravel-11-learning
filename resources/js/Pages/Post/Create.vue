@@ -67,7 +67,7 @@
 
   const submit = () => (props.isUpdating ? updatePost() : addPost());
   const addPost = () => form.post("/posts");
-  const updatePost = () => form.put(`/posts/${props.post.id}`);
+  const updatePost = () => form.put(`/posts/${props.post.slug}`);
 
   onMounted(() => {
     if (props.post) {
