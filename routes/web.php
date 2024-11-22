@@ -4,6 +4,9 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SettingsController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -25,3 +28,8 @@ Route::middleware([
 });
 
 Route::resource('posts', PostController::class);
+
+// Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+
